@@ -1,0 +1,196 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+PREFIX gist:    <https://ontologies.semanticarts.com/o/gistCore/>
+
+<https://github.com/ethereum/EIPs/commit/4938bcbf911f1175ccf0a28aaaf7154b7b796105>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "Lowercase all frontmatter keys";
+        dcterms:date         "2018-03-21T12:51:05Z";
+        dcterms:identifier   "4938bcbf911f1175ccf0a28aaaf7154b7b796105";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/4938bcbf911f1175ccf0a28aaaf7154b7b796105#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:arachnid@notdot.net";
+                               foaf:name  "Nick Johnson"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/7038c5f9b9a4845ee1bf5301c2b0ee800ec181e1>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "Add pages for each EIP type, improve listing tables with links";
+        dcterms:date         "2018-03-21T15:55:18Z";
+        dcterms:identifier   "7038c5f9b9a4845ee1bf5301c2b0ee800ec181e1";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/7038c5f9b9a4845ee1bf5301c2b0ee800ec181e1#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:arachnid@notdot.net";
+                               foaf:name  "Nick Johnson"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/9783ecdff7fa5d897d5e862a933e1a68a1a043e5>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "EIP-100 is already active on the mainnet, so its status should be Final";
+        dcterms:date         "2017-12-01T22:13:52Z";
+        dcterms:identifier   "9783ecdff7fa5d897d5e862a933e1a68a1a043e5";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/9783ecdff7fa5d897d5e862a933e1a68a1a043e5#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:i@yoichihirai.com";
+                               foaf:name  "Yoichi Hirai"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/cdc9c981e9131426a15868c914be34928eec8cc9>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "Fixed headers for existing EIPs to be conformant YAML frontmatter";
+        dcterms:date         "2018-03-20T15:10:58Z";
+        dcterms:identifier   "cdc9c981e9131426a15868c914be34928eec8cc9";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/cdc9c981e9131426a15868c914be34928eec8cc9#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:arachnid@notdot.net";
+                               foaf:name  "Nick Johnson"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/4938bcbf911f1175ccf0a28aaaf7154b7b796105#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -1,10 +1,10 @@\n ---\n-EIP: 1\n-Title: EIP Purpose and Guidelines\n-Status: Active\n-Type: Meta\n-Author: Martin Becze <mb@ethereum.org>, Hudson Jameson <hudson@ethereum.org>\n-Created: 2015-10-27, 2017-02-01\n+eip: 1\n+title: EIP Purpose and Guidelines\n+status: Active\n+type: Meta\n+author: Martin Becze <mb@ethereum.org>, Hudson Jameson <hudson@ethereum.org>\n+created: 2015-10-27, 2017-02-01\n ---\n \n What is an EIP?" .
+
+<https://github.com/ethereum/EIPs/commit/9783ecdff7fa5d897d5e862a933e1a68a1a043e5#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -4,7 +4,7 @@ Title: Change difficulty adjustment to target mean block time including uncles\n Author: Vitalik Buterin\n Type: Standard Track\n Category: Core\n-Status: Accepted\n+Status: Final\n Created: 2016-04-28\n ```\n " .
+
+<https://github.com/ethereum/EIPs/commit/e136656ccabab0c04b3874e72abe085cdb7e75d2#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -1,4 +1,12 @@\n-EDITOR NOTE: below is a copy of the EIP 100 https://github.com/ethereum/EIPs/issues/100#issue-151777532 raw text fetched on 2017-08-15.\n+```\n+EIP: 100\n+Title: Change difficulty adjustment to target mean block time including uncles\n+Author: Vitalik Buterin\n+Type: Standard Track\n+Category: Core\n+Status: Accepted\n+Created: 2016-04-28\n+```\n \n ### Specification\n " .
+
+<https://github.com/ethereum/EIPs/commit/e136656ccabab0c04b3874e72abe085cdb7e75d2>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "add preamble to EIP 100";
+        dcterms:date         "2017-08-15T15:36:05Z";
+        dcterms:identifier   "e136656ccabab0c04b3874e72abe085cdb7e75d2";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/e136656ccabab0c04b3874e72abe085cdb7e75d2#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:cdetrio@gmail.com";
+                               foaf:name  "cdetrio"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/04886529d494e88628d0d302426356e70399c6c8#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -20,22 +20,15 @@ child_diff = int(max(parent.difficulty + (parent.difficulty // BLOCK_DIFF_FACTOR\n \n If `block.number >= METROPOLIS_FORK_BLKNUM`, we change the first line to the following:\n \n-``` python\n-adj_factor = max(1 + len(parent.uncles) - ((timestamp - parent.timestamp) // 9), -99)\n-```\n-### Specification (1b)\n-\n ``` python\n adj_factor = max((2 if len(parent.uncles) else 1) - ((timestamp - parent.timestamp) // 9), -99)\n ```\n ### Rationale\n \n-This new formula ensures that the difficulty adjustment algorithm targets a constant average rate of blocks produced including uncles, and so ensures a highly predictable issuance rate that cannot be manipulated upward by manipulating the uncle rate. The formula can be fairly easily seen to be (to within a tolerance of ~3/4194304) mathematically equivalent to assuming that a block with `k` uncles is equivalent to a sequence of `k+1` blocks that all appear with the exact same timestamp, and this is likely the simplest possible way to accomplish the desired effect.\n+This new formula ensures that the difficulty adjustment algorithm targets a constant average rate of blocks produced including uncles, and so ensures a highly predictable issuance rate that cannot be manipulated upward by manipulating the uncle rate. A formula that accounts for the exact number of included uncles:\n+``` python\n+adj_factor = max(1 + len(parent.uncles) - ((timestamp - parent.timestamp) // 9), -99)\n+```\n+can be fairly easily seen to be (to within a tolerance of ~3/4194304) mathematically equivalent to assuming that a block with `k` uncles is equivalent to a sequence of `k+1` blocks that all appear with the exact same timestamp, and this is likely the simplest possible way to accomplish the desired effect. But since the exact formula depends on the full block and not just the header, we are instead using an approximate formula that accomplishes almost the same effect but has the benefit that it depends only on the block header (as you can check the uncle hash against the blank hash).\n \n Changing the denominator from 10 to 9 ensures that the block time remains roughly the same (in fact, it should decrease by ~3% given the current uncle rate of 7%).\n-\n-(1b) accomplishes almost the same effect but has the benefit that it depends only on the block header (as you can check the uncle hash against the blank hash) and not the entire block.\n-\n-### Update 2017.06.29\n-\n-Version (1b) was chosen." .
+
+<https://github.com/ethereum/EIPs/commit/04886529d494e88628d0d302426356e70399c6c8>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "EIP 100: specify only the chosen version";
+        dcterms:date         "2017-08-15T19:36:53Z";
+        dcterms:identifier   "04886529d494e88628d0d302426356e70399c6c8";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/04886529d494e88628d0d302426356e70399c6c8#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:cdetrio@gmail.com";
+                               foaf:name  "cdetrio"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/d6dfa555be623ff71f1f4b205aba8ffa2bc278dd>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "Fix author fields (#2065)";
+        dcterms:date         "2019-05-23T20:23:03Z";
+        dcterms:identifier   "d6dfa555be623ff71f1f4b205aba8ffa2bc278dd";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/d6dfa555be623ff71f1f4b205aba8ffa2bc278dd#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:alex@rtfs.hu";
+                               foaf:name  "Alex Beregszaszi"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/00230328ec847663df0a62b563210cdd562c5440#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -18,7 +18,7 @@ child_diff = int(max(parent.difficulty + (parent.difficulty // BLOCK_DIFF_FACTOR\n ...\n ```\n \n-If `block.number >= METROPOLIS_FORK_BLKNUM`, we change the first line to the following:\n+If `block.number >= BYZANTIUM_FORK_BLKNUM`, we change the first line to the following:\n \n ``` python\n adj_factor = max((2 if len(parent.uncles) else 1) - ((timestamp - parent.timestamp) // 9), -99)" .
+
+<https://github.com/ethereum/EIPs/commit/00230328ec847663df0a62b563210cdd562c5440>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "Replace a METROPOLIS with BYZANTIUM";
+        dcterms:date         "2017-11-20T11:08:59Z";
+        dcterms:identifier   "00230328ec847663df0a62b563210cdd562c5440";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/00230328ec847663df0a62b563210cdd562c5440#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:i@yoichihirai.com";
+                               foaf:name  "Yoichi Hirai"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/a6fe8b4755963e1ad80ce5246591d3a7b02463a0#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -32,3 +32,8 @@ adj_factor = max(1 + len(parent.uncles) - ((timestamp - parent.timestamp) // 9),\n can be fairly easily seen to be (to within a tolerance of ~3/4194304) mathematically equivalent to assuming that a block with `k` uncles is equivalent to a sequence of `k+1` blocks that all appear with the exact same timestamp, and this is likely the simplest possible way to accomplish the desired effect. But since the exact formula depends on the full block and not just the header, we are instead using an approximate formula that accomplishes almost the same effect but has the benefit that it depends only on the block header (as you can check the uncle hash against the blank hash).\n \n Changing the denominator from 10 to 9 ensures that the block time remains roughly the same (in fact, it should decrease by ~3% given the current uncle rate of 7%).\n+\n+### References\n+\n+1. EIP 100 issue and discussion: https://github.com/ethereum/EIPs/issues/100\n+2. https://bitslog.wordpress.com/2016/04/28/uncle-mining-an-ethereum-consensus-protocol-flaw/" .
+
+<https://github.com/ethereum/EIPs/commit/a6fe8b4755963e1ad80ce5246591d3a7b02463a0>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "EIP 100: add references";
+        dcterms:date         "2017-08-15T19:42:38Z";
+        dcterms:identifier   "a6fe8b4755963e1ad80ce5246591d3a7b02463a0";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/a6fe8b4755963e1ad80ce5246591d3a7b02463a0#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:cdetrio@gmail.com";
+                               foaf:name  "cdetrio"
+                             ] .
+
+<https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>
+        a                    foaf:Document , gist:Thing;
+        <http://purl.org/dc/elements/1.1/date>
+                "2016-04-28";
+        <http://purl.org/dc/elements/1.1/title>
+                "Change difficulty adjustment to target mean block time including uncles";
+        dcterms:identifier   "100";
+        dcterms:type         "Standards Track";
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:";
+                               foaf:name  "Vitalik Buterin (@vbuterin)"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/0aa35f0e058557a340541f7f867ba7beb05fbe39#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -0,0 +1,33 @@\n+EDITOR NOTE: below is a copy of the EIP 100 https://github.com/ethereum/EIPs/issues/100#issue-151777532 raw text fetched on 2017-08-15.\n+\n+### Specification\n+\n+Currently, the formula to compute the difficulty of a block includes the following logic:\n+\n+``` python\n+adj_factor = max(1 - ((timestamp - parent.timestamp) // 10), -99)\n+child_diff = int(max(parent.difficulty + (parent.difficulty // BLOCK_DIFF_FACTOR) * adj_factor, min(parent.difficulty, MIN_DIFF)))\n+...\n+```\n+\n+If `block.number >= METROPOLIS_FORK_BLKNUM`, we change the first line to the following:\n+\n+``` python\n+adj_factor = max(1 + len(parent.uncles) - ((timestamp - parent.timestamp) // 9), -99)\n+```\n+### Specification (1b)\n+\n+``` python\n+adj_factor = max((2 if len(parent.uncles) else 1) - ((timestamp - parent.timestamp) // 9), -99)\n+```\n+### Rationale\n+\n+This new formula ensures that the difficulty adjustment algorithm targets a constant average rate of blocks produced including uncles, and so ensures a highly predictable issuance rate that cannot be manipulated upward by manipulating the uncle rate. The formula can be fairly easily seen to be (to within a tolerance of ~3/4194304) mathematically equivalent to assuming that a block with `k` uncles is equivalent to a sequence of `k+1` blocks that all appear with the exact same timestamp, and this is likely the simplest possible way to accomplish the desired effect.\n+\n+Changing the denominator from 10 to 9 ensures that the block time remains roughly the same (in fact, it should decrease by ~3% given the current uncle rate of 7%).\n+\n+(1b) accomplishes almost the same effect but has the benefit that it depends only on the block header (as you can check the uncle hash against the blank hash) and not the entire block.\n+\n+### Update 2017.06.29\n+\n+Version (1b) was chosen." .
+
+<https://github.com/ethereum/EIPs/commit/0aa35f0e058557a340541f7f867ba7beb05fbe39>
+        a                    gist:Event;
+        <http://purl.org/dc/elements/1.1/description>
+                "create file for EIP 100";
+        dcterms:date         "2017-08-15T15:34:17Z";
+        dcterms:identifier   "0aa35f0e058557a340541f7f867ba7beb05fbe39";
+        gist:hasPart         <https://github.com/ethereum/EIPs/commit/0aa35f0e058557a340541f7f867ba7beb05fbe39#diff>;
+        gist:hasParticipant  <https://api.github.com/repos/ethereum/EIPs/contents/EIPS/eip-100.md>;
+        gist:hasParticipant  [ a          gist:Agent;
+                               foaf:mbox  "mailto:cdetrio@gmail.com";
+                               foaf:name  "cdetrio"
+                             ] .
+
+<https://github.com/ethereum/EIPs/commit/d6dfa555be623ff71f1f4b205aba8ffa2bc278dd#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -1,7 +1,7 @@\n ---\n eip: 100\n title: Change difficulty adjustment to target mean block time including uncles\n-author: Vitalik Buterin\n+author: Vitalik Buterin (@vbuterin)\n type: Standards Track\n category: Core\n status: Final" .
+
+<https://github.com/ethereum/EIPs/commit/7038c5f9b9a4845ee1bf5301c2b0ee800ec181e1#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -129,7 +129,7 @@ Each EIP must begin with an RFC 822 style header preamble, preceded and followed\n \n ` status: `<Draft | Active | Accepted | Deferred | Rejected | Withdrawn | Final | Superseded>\n \n-` type: `<Standards Track (Core, Networking, Interface, ERC)  | Informational | Process>\n+` type: `<Standards Track (Core, Networking, Interface, ERC)  | Informational | Meta>\n \n ` * category `: <Core | Networking | Interface | ERC>\n " .
+
+<https://github.com/ethereum/EIPs/commit/cdc9c981e9131426a15868c914be34928eec8cc9#diff>
+        a       gist:Delta;
+        <http://purl.org/dc/elements/1.1/description>
+                "@@ -1,9 +1,11 @@\n-    EIP: 1\n-      Title: EIP Purpose and Guidelines\n-      Status: Active\n-      Type: Meta\n-      Author: Martin Becze <mb@ethereum.org>, Hudson Jameson <hudson@ethereum.org>\n-      Created: 2015-10-27, 2017-02-01\n+---\n+EIP: 1\n+Title: EIP Purpose and Guidelines\n+Status: Active\n+Type: Meta\n+Author: Martin Becze <mb@ethereum.org>, Hudson Jameson <hudson@ethereum.org>\n+Created: 2015-10-27, 2017-02-01\n+---\n \n What is an EIP?\n --------------\n@@ -40,7 +42,7 @@ The EIP process begins with a new idea for Ethereum. It is highly recommended th\n \n Each EIP must have a champion - someone who writes the EIP using the style and format described below, shepherds the discussions in the appropriate forums, and attempts to build community consensus around the idea.\n \n-Vetting an idea publicly before going as far as writing an EIP is meant to save the potential author time. Asking the Ethereum community first if an idea is original helps prevent too much time being spent on something that is guaranteed to be rejected based on prior discussions (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where Ethereum is used. Examples of appropriate public forums to gauge interest around your EIP include [the Ethereum subreddit], [the Issues section of this repository], and [one of the Ethereum Gitter chat rooms]. In particular, [the Issues section of this repository] is an excellent place to discuss your proposal with the community and start creating more formalized language around your EIP. \n+Vetting an idea publicly before going as far as writing an EIP is meant to save the potential author time. Asking the Ethereum community first if an idea is original helps prevent too much time being spent on something that is guaranteed to be rejected based on prior discussions (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where Ethereum is used. Examples of appropriate public forums to gauge interest around your EIP include [the Ethereum subreddit], [the Issues section of this repository], and [one of the Ethereum Gitter chat rooms]. In particular, [the Issues section of this repository] is an excellent place to discuss your proposal with the community and start creating more formalized language around your EIP.\n \n Once the champion has asked the Ethereum community whether an idea has any chance of acceptance a draft EIP should be presented as a [pull request]. This gives the author a chance to continuously edit the draft EIP for proper formatting and quality. This also allows for further public comment and the author of the EIP to address concerns about the proposal.\n " .
