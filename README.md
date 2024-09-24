@@ -1,6 +1,8 @@
-Underlying RDF triples for a local SPARQL endpoint that allows query of the Ethereum EIP Github repository.
+The file EIPS.ttl contains an RDF dataset for a local SPARQL endpoint.
 
-Under development ...
+##### Example Queries with SPARQL
+
+! Under development ...
 
 Used vocabularies:
 - RDF standard vocabulary (https://www.w3.org/TR/rdf11-schema/)
