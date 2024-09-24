@@ -2,7 +2,10 @@ The file EIPS.ttl contains an RDF dataset for a local SPARQL endpoint.
 
 ### Example Queries with SPARQL
 
-
+Return all triples:
+```sparql
+CONSTRUCT WHERE { ?s ?p ?o . }
+```
 
 ### Used vocabularies:
 - RDF standard vocabulary (https://www.w3.org/TR/rdf11-schema/)
