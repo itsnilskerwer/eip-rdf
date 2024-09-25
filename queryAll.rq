@@ -1,3 +1,3 @@
-// Return all triples
+# Return all triples
 
 CONSTRUCT WHERE { ?s ?p ?o . }
