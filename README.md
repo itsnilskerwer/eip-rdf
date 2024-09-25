@@ -19,8 +19,9 @@ Return all properties of a Document:
 
 ```sparql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX dc: <http://purl.org/dc/terms/>
-
+PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 CONSTRUCT {
   ?eip a foaf:Document .
   ?eip ?p ?o .
@@ -35,6 +36,8 @@ Retrieve all authors:
 ```sparql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 CONSTRUCT { ?document gist:hasParticipant ?participant . }
 WHERE {
  ?document a foaf:Document .
@@ -49,7 +52,11 @@ PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 CONSTRUCT { ?document gist:latestCommit ?commit . ?commit dc:date ?latestCommitDate . }
-WHERE { ?document a foaf:Document . { SELECT ?document (MAX(?commitDate) AS ?latestCommitDate) WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . } GROUP BY ?document } ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }
+WHERE { ?document a foaf:Document . {
+  SELECT ?document (MAX(?commitDate) AS ?latestCommitDate)
+    WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . }
+    GROUP BY ?document
+} ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }
 ```
 
 
