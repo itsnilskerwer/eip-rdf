@@ -50,19 +50,21 @@ WHERE {
   http://localhost:3030/EIPS/sparql
 ```
 
-Retrieve the latest EIP created:
- ```sparql
-  PREFIX dcterms: <http://purl.org/dc/terms/>
-
-    SELECT ?eip ?id ?date
-    WHERE {
-      ?eip a dcterms:Document ;
-           dcterms:identifier ?id ;
-           dcterms:created ?date .
-    }
-    ORDER BY DESC(?date)
-    LIMIT 1
+Retrieve the latest commit towards a Document:
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/> PREFIX dcterms: <http://purl.org/dc/terms/> PREFIX dc: <http://purl.org/dc/elements/1.1/> CONSTRUCT { ?document gist:latestCommit ?commit . ?commit dc:date ?latestCommitDate . } WHERE { ?document a foaf:Document . { SELECT ?document (MAX(?commitDate) AS ?latestCommitDate) WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . } GROUP BY ?document } ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }
 ```
+
+
+ ```sparql
+curl -X POST \
+  -H "Accept: text/turtle" \
+  --data-urlencode "query=PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/> PREFIX dcterms: <http://purl.org/dc/terms/> PREFIX dc: <http://purl.org/dc/elements/1.1/> CONSTRUCT { ?document gist:latestCommit ?commit . ?commit dc:date ?latestCommitDate . } WHERE { ?document a foaf:Document . { SELECT ?document (MAX(?commitDate) AS ?latestCommitDate) WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . } GROUP BY ?document } ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }" \
+  http://localhost:3030/EIPS/sparql
+
+```
+
+### More complex queries
 Retrieve EIPs authored by a specific person:
 
 ```sparql
@@ -87,7 +89,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 ### Used vocabularies:
 - RDF standard vocabulary (https://www.w3.org/TR/rdf11-schema/)
 - FOAF (Friend of a Friend) an upper-level ontology (http://xmlns.com/foaf/spec/)
-- DC (Dublin Core) and DCTerms (https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
+- DC (Dublin Core) and
+- DCTerms (https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)
 - GIST an upper-level ontology (https://github.com/semanticarts/gist)
 
 ### Mental Model:
