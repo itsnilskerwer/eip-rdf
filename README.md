@@ -6,19 +6,6 @@ Return all triples:
 ```sparql
 CONSTRUCT WHERE { ?s ?p ?o . }
 ```
-Return all EIPs and their creation date:
-
-```sparql
-CONSTRUCT {
-      ?eip dcterms:identifier ?id ;
-           dcterms:created ?date .
-    }
-    WHERE {
-      ?eip a dcterms:Document ;
-           dcterms:identifier ?id ;
-           dcterms:created ?date .
-    }
-```
 
 Retrieve all authors:
 ```sparql
