@@ -17,7 +17,7 @@ CONSTRUCT {
       ?eip a dcterms:Document ;
            dcterms:identifier ?id ;
            dcterms:created ?date .
-    }"
+    }
 ```
 
 Retrieve all authors:
@@ -33,7 +33,7 @@ Retrieve all authors:
            foaf:maker ?author .
            
       ?author foaf:name ?authorName .
-    }"
+    }
 ```
 
 Retrieve the latest EIP created:
@@ -47,7 +47,7 @@ Retrieve the latest EIP created:
            dcterms:created ?date .
     }
     ORDER BY DESC(?date)
-    LIMIT 1"
+    LIMIT 1
 ```
 Retrieve EIPs authored by a specific person:
 
@@ -67,7 +67,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
            
       ?author foaf:name ?authorName .
       FILTER (?authorName = 'Specific Author Name')
-    }"
+    }
 ```
 
 ### Used vocabularies:
@@ -80,4 +80,4 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 
 <img width="954" alt="Bildschirmfoto 2024-09-24 um 06 08 29" src="https://github.com/user-attachments/assets/05a7fcda-fe3c-42ef-9989-e1992e2a81b6">
 
-! Under development ...
+Disclaimer: Under development ...
