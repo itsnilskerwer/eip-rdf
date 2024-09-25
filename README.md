@@ -1,5 +1,13 @@
 The file EIPS.ttl contains an RDF dataset for a local SPARQL endpoint.
 
+Using curl, a SPARQL query ("query" is the placeholder for your actual query) can be sent to the dataset like this:
+```bash
+curl -X POST \
+  -H "Accept: text/turtle" \
+  --data-urlencode "query=query" \
+  http://localhost:3030/EIPS/sparql
+```
+
 ### Example Queries with SPARQL
 
 Return all triples:
@@ -23,14 +31,6 @@ WHERE {
 }
 ```
 
-
-```sparql
-curl -X POST \
-  -H "Accept: text/turtle" \
-  --data-urlencode "query=PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX dc: <http://purl.org/dc/terms/> CONSTRUCT { ?eip a foaf:Document . ?eip ?p ?o . } WHERE { ?eip a foaf:Document . ?eip ?p ?o . }" \
-  http://localhost:3030/EIPS/sparql
-```
-
 Retrieve all authors:
 ```sparql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -42,27 +42,16 @@ WHERE {
 }
 ```
 
-
-```sparql
- curl -X POST \
-  -H "Accept: text/turtle" \
-  --data-urlencode "query=PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/> CONSTRUCT { ?document gist:hasParticipant ?participant . } WHERE { ?document a foaf:Document . ?document gist:hasParticipant ?participant . }" \
-  http://localhost:3030/EIPS/sparql
-```
-
 Retrieve the latest commit towards a Document:
 ```sparql
-PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/> PREFIX dcterms: <http://purl.org/dc/terms/> PREFIX dc: <http://purl.org/dc/elements/1.1/> CONSTRUCT { ?document gist:latestCommit ?commit . ?commit dc:date ?latestCommitDate . } WHERE { ?document a foaf:Document . { SELECT ?document (MAX(?commitDate) AS ?latestCommitDate) WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . } GROUP BY ?document } ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+CONSTRUCT { ?document gist:latestCommit ?commit . ?commit dc:date ?latestCommitDate . }
+WHERE { ?document a foaf:Document . { SELECT ?document (MAX(?commitDate) AS ?latestCommitDate) WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . } GROUP BY ?document } ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }
 ```
 
-
- ```sparql
-curl -X POST \
-  -H "Accept: text/turtle" \
-  --data-urlencode "query=PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/> PREFIX dcterms: <http://purl.org/dc/terms/> PREFIX dc: <http://purl.org/dc/elements/1.1/> CONSTRUCT { ?document gist:latestCommit ?commit . ?commit dc:date ?latestCommitDate . } WHERE { ?document a foaf:Document . { SELECT ?document (MAX(?commitDate) AS ?latestCommitDate) WHERE { ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?commitDate . } GROUP BY ?document } ?commit a gist:Event ; dcterms:isVersionOf ?document ; dc:date ?latestCommitDate . }" \
-  http://localhost:3030/EIPS/sparql
-
-```
 
 ### More complex queries
 Retrieve EIPs authored by a specific person:
