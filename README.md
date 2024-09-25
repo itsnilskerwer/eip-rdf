@@ -7,20 +7,47 @@ Return all triples:
 CONSTRUCT WHERE { ?s ?p ?o . }
 ```
 
+Return all properties of a Document:
+
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+CONSTRUCT {
+  ?eip a foaf:Document .
+  ?eip ?p ?o .
+}
+WHERE {
+  ?eip a foaf:Document .
+  ?eip ?p ?o .
+}
+```
+
+
+```sparql
+curl -X POST \
+  -H "Accept: text/turtle" \
+  --data-urlencode "query=PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX dc: <http://purl.org/dc/terms/> CONSTRUCT { ?eip a foaf:Document . ?eip ?p ?o . } WHERE { ?eip a foaf:Document . ?eip ?p ?o . }" \
+  http://localhost:3030/EIPS/sparql
+```
+
 Retrieve all authors:
 ```sparql
- CONSTRUCT {
-      ?eip dcterms:identifier ?id ;
-           foaf:maker ?author .
-      ?author foaf:name ?authorName .
-    }
-    WHERE {
-      ?eip a dcterms:Document ;
-           dcterms:identifier ?id ;
-           foaf:maker ?author .
-           
-      ?author foaf:name ?authorName .
-    }
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
+CONSTRUCT { ?document gist:hasParticipant ?participant . }
+WHERE {
+ ?document a foaf:Document .
+ ?document gist:hasParticipant ?participant .
+}
+```
+
+
+```sparql
+ curl -X POST \
+  -H "Accept: text/turtle" \
+  --data-urlencode "query=PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/> CONSTRUCT { ?document gist:hasParticipant ?participant . } WHERE { ?document a foaf:Document . ?document gist:hasParticipant ?participant . }" \
+  http://localhost:3030/EIPS/sparql
 ```
 
 Retrieve the latest EIP created:
