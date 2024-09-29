@@ -1,5 +1,6 @@
 ## Dataset 
 The file EIPS.ttl contains an RDF dataset for a local SPARQL endpoint.
+! Only information about EIP-777 currently !
 
 ## Querying the dataset
 Using curl, a SPARQL query ("query" is the placeholder for your actual query) can be sent to the dataset like this:
