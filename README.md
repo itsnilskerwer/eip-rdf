@@ -13,6 +13,10 @@ curl -X POST \
 
 Example Queries are found in files ending with .rq
 
+## Source code for triplification of EIP data
+
+Found in MyCustomTriplifier.java
+
 ## Used vocabularies:
 - RDF standard vocabulary (https://www.w3.org/TR/rdf11-schema/)
 - FOAF (Friend of a Friend) an upper-level ontology (http://xmlns.com/foaf/spec/)
@@ -23,5 +27,6 @@ Example Queries are found in files ending with .rq
 ## Mental Model:
 
 <img width="954" alt="Bildschirmfoto 2024-09-24 um 06 08 29" src="https://github.com/user-attachments/assets/05a7fcda-fe3c-42ef-9989-e1992e2a81b6">
+
 
 Disclaimer: Under development ...
