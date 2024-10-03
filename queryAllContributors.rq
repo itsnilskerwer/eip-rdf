@@ -1,1 +1,17 @@
 # 
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+CONSTRUCT {
+  ?eip gist:hasParticipant ?eipEditor.
+  ?eip gist:hasCommitAuthor ?commitAuthor.
+  }
+WHERE {
+  ?eip a foaf:Document.
+  ?eip gist:hasParticipant ?eipEditor.
+  ?commitResource dcterms:isVersionOf ?eip.
+  ?commitResource gist:hasParticipant
+  ?commitAuthor.
+} 
