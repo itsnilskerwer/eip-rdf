@@ -1,4 +1,8 @@
-# Return all properties of an EIP Document:
+# Aim: Return all properties of an EIP Document
+
+# This file contains a curated SPARQL query. 
+# To use it, copy the entire query, including prefix definitions.
+# (Do not copy comments at the top of this file)
 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX gist: <https://ontologies.semanticarts.com/o/gistCore/>
