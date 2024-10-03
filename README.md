@@ -25,8 +25,7 @@ Found in MyCustomTriplifier.java
 - GIST an upper-level ontology (https://github.com/semanticarts/gist)
 
 ## Mental Model:
-
-<img width="954" alt="Bildschirmfoto 2024-09-24 um 06 08 29" src="https://github.com/user-attachments/assets/05a7fcda-fe3c-42ef-9989-e1992e2a81b6">
+<img width="950" alt="mental_model_rfc" src="https://github.com/user-attachments/assets/7d502ccf-2f7f-46bd-8f7e-f97b8348ca2c">
 
 
 Disclaimer: Under development ...
