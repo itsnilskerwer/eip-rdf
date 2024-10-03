@@ -1,3 +1,7 @@
 # Return all triples
 
+# This file contains a curated SPARQL query. 
+# To use it, copy the entire query.
+# (Do not copy comments at the top of this file)
+
 CONSTRUCT WHERE { ?s ?p ?o . }
