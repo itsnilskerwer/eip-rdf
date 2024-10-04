@@ -23,7 +23,7 @@ Example Queries are found in files ending with .rq
 
 ## Source code for triplification of EIP data (MyCustomTriplifier.java)
 
-Data is fetched from Github via http requests. This is not automated to update the dataset at this time.
+Data is fetched from Github via http requests. This is not automated to update the dataset at this time. Feedback is highly appreciated.
 
 ## Used vocabularies:
 - RDF standard vocabulary (https://www.w3.org/TR/rdf11-schema/)
