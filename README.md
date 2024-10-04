@@ -1,7 +1,7 @@
 ## Dataset 
+! Only information about EIP-777 currently !
 
 The file EIP-777.ttl contains the full RDF dataset used by the SPARQL endpoint.
-! Only information about EIP-777 currently !
 
 The file EIPS.ttl contains the configuration (usually called assembler file).
 
