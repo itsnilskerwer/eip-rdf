@@ -1,3 +1,7 @@
+## A website full of resources
+
+https://itsnilskerwer.github.io
+
 ## Dataset 
 ! Only information about EIP-777 currently !
 
@@ -36,4 +40,4 @@ Data is fetched from Github via http requests. This is not automated to update t
 <img width="950" alt="mental_model_rfc" src="https://github.com/user-attachments/assets/7d502ccf-2f7f-46bd-8f7e-f97b8348ca2c">
 
 
-Disclaimer: Under development ...
+Last update October 4th 2024. Disclaimer: Project Under development ...
