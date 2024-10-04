@@ -6,7 +6,7 @@ The file EIP-777.ttl contains the full RDF dataset used by the SPARQL endpoint.
 The file EIPS.ttl contains the configuration (usually called assembler file).
 
 ## Querying the dataset
-! "query" is the placeholder for your actual query !
+! query is the placeholder for your actual SPARQL query !
 
 From a terminal, a query can be sent to the dataset like this:
 ```bash
