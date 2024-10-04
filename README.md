@@ -1,21 +1,29 @@
 ## Dataset 
-The file EIPS.ttl contains an RDF dataset for a local SPARQL endpoint.
+
+The file EIP-777.ttl contains the full RDF dataset used by the SPARQL endpoint.
 ! Only information about EIP-777 currently !
 
+The file EIPS.ttl contains the configuration (usually called assembler file).
+
 ## Querying the dataset
-Using curl, a SPARQL query ("query" is the placeholder for your actual query) can be sent to the dataset like this:
+! "query" is the placeholder for your actual query !
+
+From a terminal, a query can be sent to the dataset like this:
 ```bash
 curl -X POST \
   -H "Accept: text/turtle" \
   --data-urlencode "query=query" \
-  http://localhost:3030/EIPS/sparql
+   http://13.49.44.222:3030/EIP-777/sparql
 ```
-
+Alternatively, queries can be pasted into a browser search bar in this format
+```bash
+http://13.49.44.222:3030/EIP-777/sparql?query=query&format=text/turtle
+```
 Example Queries are found in files ending with .rq
 
-## Source code for triplification of EIP data
+## Source code for triplification of EIP data (MyCustomTriplifier.java)
 
-Found in MyCustomTriplifier.java
+Data is fetched from Github via http requests. This is not automated to update the dataset at this time.
 
 ## Used vocabularies:
 - RDF standard vocabulary (https://www.w3.org/TR/rdf11-schema/)
