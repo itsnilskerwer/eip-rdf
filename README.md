@@ -1,4 +1,4 @@
-*************************** Project abandoned (for now) ***********************
+******** Project abandoned (for now) ********
 
 
 ##### What have i learned (TLDR)
@@ -40,7 +40,6 @@ Data is fetched from Github via http requests. This is not automated to update t
 
 ## Querying the dataset
 ! This assumes your public instance is up and running !
-! query is the placeholder for your actual SPARQL query !
 
 From a terminal, a query can be sent to the dataset like this:
 ```bash
@@ -49,6 +48,8 @@ curl -X POST \
   --data-urlencode "query=query" \
    http://13.49.44.222:3030/EIP-777/sparql
 ```
+! query is the placeholder for your actual SPARQL query !
+
 Alternatively, queries can be pasted into a browser search bar in this format
 ```bash
 http://13.49.44.222:3030/EIP-777/sparql?query=query&format=text/turtle
@@ -64,5 +65,5 @@ Last update October 4th 2024. Disclaimer: Project Under development ...
 
 ## Shoutout 
 
-For step-by-step instructions to host on AWS EC2 free-tier, and a bunch of interesting blog posts see https://www.bobdc.com 
+For inspiration and step-by-step instructions to host on AWS EC2 free-tier, and a bunch of interesting blog posts see https://www.bobdc.com 
 
